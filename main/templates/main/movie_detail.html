@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Кинотеатр -Детали фильма {{ movie.title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ movie.title }}</h2>
+    <img src="{{ movie.poster.url }}" alt="{{ movie.title }}" class="img-fluid mb-4">
+    <p>{{ movie.details }}</p>
+    <a href="{% url 'home' %}" class="btn btn-primary">Назад</a>
+    <a href="{{ movie.website_link }}" class="btn btn-primary">Трейлер</a>
+       <div>
+    Методы оплаты: VISA,MasterCard,O!деньги
+</div>
+
+
+<div>
+    Подписывайтесь на нас в Instagram: <a href="#">https://www.instagram.com/kamchybekovv00/</a><br>
+    Подписывайтесь на нас в Telegram: <a href="#">https://t.me/Udicwjn</a><br>
+    Телефон: 0777-22-48-80
+</div>
+
+</div>
+{% endblock %}
+
